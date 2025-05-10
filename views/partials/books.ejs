@@ -1,0 +1,18 @@
+<% if (locals.books && locals.books.length >= 1) { %>
+  <ol>
+    <% locals.books.forEach((book) => { %>
+      <div>
+        <img src="<%= book.coverUrl %>" alt="Book cover">
+      </div>
+      <h2><%= book.title %></h2>
+      <ol>
+        <% book.authors.forEach((author) => { %>
+          <li><%= author %></li>    
+        <% }) %>  
+      </ol> 
+      <p><%= book.dateFinished %></p>
+      <p><%= book.description %></p>
+      <p><%= book.rating %></p>
+    <% }) %>
+  </ol>
+<% } %>
