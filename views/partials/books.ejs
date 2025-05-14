@@ -7,9 +7,10 @@
       <h2><%= book.title %></h2>
       <ol>
         <% book.authors.forEach((author) => { %>
-          <li><%= author %></li>    
+          <li><%= author.name %></li>    
         <% }) %>  
       </ol> 
+      <p><%= book.firstPublishYear %></p>
       <p><%= book.dateFinished %></p>
       <p><%= book.description %></p>
       <p><%= book.rating %></p>
