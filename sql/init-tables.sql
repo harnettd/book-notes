@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS books CASCADE;
 CREATE TABLE books (
     edition_key text PRIMARY KEY,
     title text NOT NULL,
-    first_publication_year date NOT NULL,
+    first_publication_year integer NOT NULL,
     cover_art_url text
 );
 
