@@ -1,19 +1,21 @@
 <% if (locals.books && locals.books.length >= 1) { %>
   <ol>
     <% locals.books.forEach((book) => { %>
-      <div>
-        <img src="<%= book.coverUrl %>" alt="Book cover">
-      </div>
-      <h2><%= book.title %></h2>
-      <ol>
-        <% book.authors.forEach((author) => { %>
-          <li><%= author.name %></li>    
-        <% }) %>  
-      </ol> 
-      <p><%= book.firstPublishYear %></p>
-      <p><%= book.dateFinished %></p>
-      <p><%= book.description %></p>
-      <p><%= book.rating %></p>
+      <li>
+        <div>
+          <img src="<%= book.cover_art_url %>" alt="Book cover">
+        </div>
+        <h2><%= book.title %></h2>
+        <ol>
+          <% book.authorNames.forEach((name) => { %>
+            <li><%= name %></li>    
+            <% }) %>  
+          </ol> 
+          <p><%= book.first_publication_year %></p>
+          <p><%= book.date_finished %></p>
+          <p><%= book.comments %></p>
+          <p><%= book.rating %></p>
+        </li>
     <% }) %>
   </ol>
 <% } %>
